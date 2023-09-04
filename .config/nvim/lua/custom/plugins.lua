@@ -103,6 +103,11 @@ local plugins = {
 		"nvimdev/guard.nvim",
 		init = init.guard,
 	},
+
+	{
+		"kevinhwang91/nvim-bqf",
+		ft = "qf",
+	},
 }
 
 return plugins
