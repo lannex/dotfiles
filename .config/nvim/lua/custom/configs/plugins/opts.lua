@@ -43,6 +43,7 @@ M.mason = {
 	ensure_installed = {
 		"lua-language-server",
 		"stylua",
+		"taplo",
 
 		"css-lsp",
 		"html-lsp",
@@ -53,7 +54,10 @@ M.mason = {
 		"clangd",
 		"clang-format",
 		"pyright",
-		"rust_analyzer",
+		"black",
+		"isort",
+		"ruff-lsp",
+		"rust-analyzer",
 		-- "rustfmt", rustfmt should no longer be installed via Mason but instead through rustup, due to external factors.
 	},
 }
@@ -63,13 +67,17 @@ M.nvimtree = {
 	git = {
 		enable = false,
 	},
-
 	renderer = {
 		highlight_git = true,
 		icons = {
 			show = {
 				git = true,
 			},
+		},
+	},
+	filters = {
+		custom = {
+			".DS_Store",
 		},
 	},
 }
