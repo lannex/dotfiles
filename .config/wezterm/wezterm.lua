@@ -8,4 +8,9 @@ end
 
 config.color_scheme = "Dracula (Official)"
 
+config.inactive_pane_hsb = {
+	saturation = 0.9,
+	brightness = 0.5,
+}
+
 return config
