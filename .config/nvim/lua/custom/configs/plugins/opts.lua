@@ -29,7 +29,6 @@ M.treesitter = {
 		"c",
 		"rust",
 		"python",
-		"eilxir",
 		"go",
 	},
 	indent = {
@@ -39,23 +38,20 @@ M.treesitter = {
 
 M.mason = {
 	ensure_installed = {
-		-- lua stuff
 		"lua-language-server",
 		"stylua",
 
-		-- web dev stuff
 		"css-lsp",
 		"html-lsp",
 		"typescript-language-server",
 		"deno",
 		"prettier",
 
-		-- c/cpp stuff
 		"clangd",
 		"clang-format",
-
-		-- python
 		"pyright",
+		"rust_analyzer",
+		-- "rustfmt", rustfmt should no longer be installed via Mason but instead through rustup, due to external factors.
 	},
 }
 

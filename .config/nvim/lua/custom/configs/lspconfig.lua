@@ -3,7 +3,14 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require("lspconfig")
 
-local servers = { "html", "cssls", "tsserver", "clangd" }
+local servers = {
+	"html",
+	"cssls",
+	"tsserver",
+	"clangd",
+	"ruff_lsp",
+	"rust_analyzer",
+}
 
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
@@ -15,7 +22,6 @@ end
 lspconfig.pyright.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
-	filetypes = { "python" },
 	settings = {
 		python = {
 			analysis = {
@@ -23,10 +29,4 @@ lspconfig.pyright.setup({
 			},
 		},
 	},
-})
-
-lspconfig.ruff_lsp.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-	filetypes = { "python" },
 })

@@ -6,7 +6,9 @@ end
 
 M.guard = function()
 	local ft = require("guard.filetype")
+  ft("lua"):fmt("stylua")
 	ft("python"):fmt("black"):append("isort")
+  ft("rust"):fmt("rustfmt")
 
 	require("guard").setup({
 		fmt_on_save = true,
