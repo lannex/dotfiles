@@ -30,6 +30,9 @@ M.treesitter = {
 		"rust",
 		"python",
 		"go",
+		"elixir",
+		"kotlin",
+		"clojure",
 	},
 	indent = {
 		enable = true,
