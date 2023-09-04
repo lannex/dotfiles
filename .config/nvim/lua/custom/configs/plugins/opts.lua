@@ -4,20 +4,36 @@ M.treesitter = {
 	ensure_installed = {
 		"vim",
 		"lua",
+		"bash",
+		"markdown",
+		"markdown_inline",
+		"csv",
+		"dockerfile",
+		"dot",
+		"json",
+		"xml",
+		"make",
+		"sql",
+		"terraform",
+		"toml",
+
 		"html",
 		"css",
 		"javascript",
 		"typescript",
 		"tsx",
+		"svelte",
+		"graphql",
+		"prisma",
+
 		"c",
-		"markdown",
-		"markdown_inline",
+		"rust",
+		"python",
+		"eilxir",
+		"go",
 	},
 	indent = {
 		enable = true,
-		-- disable = {
-		--   "python"
-		-- },
 	},
 }
 
