@@ -24,10 +24,21 @@ M.leap = {
 
 M.guard = {
 	n = {
-		["<SM-f>"] = { ":GuardFmt<CR>", "" },
+		["<SM-f>"] = { "<Cmd>GuardFmt<CR>", "Guard fmt" },
 	},
 	i = {
-		["<SM-f>"] = { "<ESC>:GuardFmt<CR>", "" },
+		["<SM-f>"] = { "<Cmd>GuardFmt<CR>", "Guard fmt" },
 	},
 }
+
+M.trouble = {
+	n = {
+		["<leader>tx"] = { "<Cmd>TroubleToggle<CR>", "Trouble Toggle" },
+		["<leader>tw"] = { "<Cmd>TroubleToggle workspace_diagnostics<CR>", "Trouble workspace diagnostics" },
+		["<leader>ti"] = { "<Cmd>TroubleToggle document_diagnostics<CR>", "Trouble document diagnostics" },
+		["<leader>tq"] = { "<Cmd>TroubleToggle quickfix<CR>", "Trouble quickfix" },
+		["<leader>tl"] = { "<Cmd>TroubleToggle loclist<CR>", "Trouble loclist" },
+	},
+}
+
 return M

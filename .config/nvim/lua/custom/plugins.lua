@@ -108,6 +108,12 @@ local plugins = {
 		"kevinhwang91/nvim-bqf",
 		ft = "qf",
 	},
+
+	{
+		"folke/trouble.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		event = "VeryLazy",
+	},
 }
 
 return plugins
