@@ -13,4 +13,6 @@ config.inactive_pane_hsb = {
 	brightness = 0.5,
 }
 
+config.keys = {}
+
 return config

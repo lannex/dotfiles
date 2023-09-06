@@ -5,6 +5,10 @@ M.general = {
 	n = {
 		[";"] = { ":", "enter command mode", opts = { nowait = true } },
 	},
+
+	i = {
+		["<C-s>"] = { "<Cmd>write<CR>", "Write" },
+	},
 }
 
 M.leap = {
