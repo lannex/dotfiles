@@ -20,6 +20,20 @@ M.leap = {
 		["<M-s>"] = { "<Plug>(leap-forward-to)", "Leap forward to" },
 		["<M-S>"] = { "<Plug>(leap-backward-to)", "Leap backward to" },
 	},
+	i = {
+		["<M-s>"] = {
+			function()
+				require("leap").leap({})
+			end,
+			"Leap forward to",
+		},
+		["<M-S>"] = {
+			function()
+				require("leap").leap({ backward = true })
+			end,
+			"Leap backward to",
+		},
+	},
 }
 
 M.guard = {
