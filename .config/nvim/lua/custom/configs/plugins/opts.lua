@@ -78,6 +78,7 @@ M.nvimtree = {
 	filters = {
 		custom = {
 			".DS_Store",
+			"__pycache__",
 		},
 	},
 }

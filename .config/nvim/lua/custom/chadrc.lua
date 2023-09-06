@@ -10,6 +10,17 @@ M.ui = {
 
 	hl_override = highlights.override,
 	hl_add = highlights.add,
+	statusline = {
+		overriden_modules = function(modules)
+			table.insert(
+				modules,
+				2,
+				(function()
+					return vim.fn.expand("%:h")
+				end)()
+			)
+		end,
+	},
 }
 
 M.plugins = "custom.plugins"
