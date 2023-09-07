@@ -135,7 +135,7 @@ M.cmp = {
 
 M.copilot = {
 	suggestion = {
-		auto_trigger = false,
+		auto_trigger = true,
 	},
 }
 
