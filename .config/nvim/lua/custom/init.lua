@@ -6,3 +6,8 @@
 --   command = "tabdo wincmd =",
 -- })
 --
+
+local opt = vim.opt
+
+opt.title = true
+opt.timeoutlen = 0
