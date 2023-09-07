@@ -10,4 +10,5 @@
 local opt = vim.opt
 
 opt.title = true
-opt.timeoutlen = 0
+opt.timeoutlen = 100
+opt.ttimeoutlen = 0
