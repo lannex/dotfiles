@@ -10,6 +10,23 @@ M.general = {
 	},
 }
 
+M.tabufline = {
+	n = {
+		["<AS-right>"] = {
+			function()
+				require("nvchad.tabufline").move_buf(1)
+			end,
+			"Next buffer",
+		},
+		["<AS-left>"] = {
+			function()
+				require("nvchad.tabufline").move_buf(-1)
+			end,
+			"Previous buffer",
+		},
+	},
+}
+
 M.leap = {
 	n = {
 		["s"] = {
