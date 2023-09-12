@@ -16,13 +16,25 @@ M.tabufline = {
 			function()
 				require("nvchad.tabufline").move_buf(1)
 			end,
-			"Next buffer",
+			"Move to next buffer",
 		},
 		["<AS-left>"] = {
 			function()
 				require("nvchad.tabufline").move_buf(-1)
 			end,
-			"Previous buffer",
+			"Move to previous buffer",
+		},
+		["<A-]>"] = {
+			function()
+				require("nvchad.tabufline").tabuflineNext()
+			end,
+			"Goto next buffer",
+		},
+		["<A-[>"] = {
+			function()
+				require("nvchad.tabufline").tabuflinePrev()
+			end,
+			"Goto prev buffer",
 		},
 	},
 }
