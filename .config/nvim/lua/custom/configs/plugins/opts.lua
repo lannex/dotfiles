@@ -136,6 +136,9 @@ M.cmp = {
 M.copilot = {
 	suggestion = {
 		auto_trigger = true,
+		keymap = {
+			accept = "<S-CR>",
+		},
 	},
 }
 

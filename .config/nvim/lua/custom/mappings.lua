@@ -37,17 +37,17 @@ M.leap = {
 			"S",
 			"Delete [count] lines [into register x] and start insert.  Synonym for 'cc' |linewise|.",
 		},
-		["<M-s>"] = { "<Plug>(leap-forward-to)", "Leap forward to" },
-		["<M-S>"] = { "<Plug>(leap-backward-to)", "Leap backward to" },
+		["<A-s>"] = { "<Plug>(leap-forward-to)", "Leap forward to" },
+		["<A-S>"] = { "<Plug>(leap-backward-to)", "Leap backward to" },
 	},
 	i = {
-		["<M-s>"] = {
+		["<A-s>"] = {
 			function()
 				require("leap").leap({})
 			end,
 			"Leap forward to",
 		},
-		["<M-S>"] = {
+		["<A-S>"] = {
 			function()
 				require("leap").leap({ backward = true })
 			end,
@@ -58,10 +58,10 @@ M.leap = {
 
 M.guard = {
 	n = {
-		["<SM-f>"] = { "<Cmd>GuardFmt<CR>", "Guard fmt" },
+		["<SA-f>"] = { "<Cmd>GuardFmt<CR>", "Guard fmt" },
 	},
 	i = {
-		["<SM-f>"] = { "<Cmd>GuardFmt<CR>", "Guard fmt" },
+		["<SA-f>"] = { "<Cmd>GuardFmt<CR>", "Guard fmt" },
 	},
 }
 
