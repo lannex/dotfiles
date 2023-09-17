@@ -6,7 +6,6 @@ create_config_symlinks() {
   local target_dir=~/.config
   local config_list=(nvim/lua/custom wezterm)
 
-
   for item in "${config_list[@]}"; do
     rm -r "$target_dir/$item"
     ln -fs "$source_dir/.config/$item" "$target_dir/$item"
