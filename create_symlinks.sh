@@ -1,13 +1,27 @@
 #!/bin/bash
 
-SOURCE_DIR=~/dotfiles
 
-SOURCES=(nvim/lua/custom wezterm)
+create_config_symlinks() {
+  local source_dir=~/dotfiles
+  local target_dir=~/.config
+  local config_list=(nvim/lua/custom wezterm)
 
-TARGET_DIR=~/.config
 
-# 대상 파일 목록을 순회하며 심볼릭 링크 생성
-for item in "${SOURCES[@]}"; do
-  ln -fs "$SOURCE_DIR/.config/$item" "$TARGET_DIR/$item"
-done
+  for item in "${config_list[@]}"; do
+    rm -r "$target_dir/$item"
+    ln -fs "$source_dir/.config/$item" "$target_dir/$item"
+  done
+}
 
+create_root_symlinks() {
+  local source_dir=~/dotfiles
+  local target_dir=~
+  local root_list=(.tool-versions .atamanrc.config)
+
+  for item in "${root_list[@]}"; do
+    ln -fs "$source_dir/$item" "$target_dir/$item"
+  done
+}
+
+create_config_symlinks
+create_root_symlinks
