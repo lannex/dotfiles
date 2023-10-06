@@ -102,6 +102,9 @@ local plugins = {
 	{
 		"nvimdev/guard.nvim",
 		init = init.guard,
+    dependencies = {
+      "nvimdev/guard-collection",
+    }
 	},
 
 	{
