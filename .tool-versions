@@ -3,7 +3,7 @@ pnpm 8.6.12
 rust 1.72.0
 yarn 1.22.19
 deno 1.31.2
-pulumi 3.61.0
+pulumi 3.88.0
 mysql 5.7.31
 k9s 0.27.4
 python 3.11.5
