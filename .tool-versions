@@ -15,3 +15,4 @@ helm 3.13.1
 kubectx 0.9.5
 bun 1.0.7
 kubectl 1.28.3
+eksctl 0.164.0
