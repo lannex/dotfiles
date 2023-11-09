@@ -15,7 +15,7 @@ create_config_symlinks() {
 create_root_symlinks() {
   local source_dir=~/dotfiles
   local target_dir=~
-  local root_list=(.tool-versions .atamanrc.config .ideavimrc)
+  local root_list=(.tool-versions .atamanrc.config .ideavimrc .zshrc)
 
   for item in "${root_list[@]}"; do
     ln -fs "$source_dir/$item" "$target_dir/$item"
