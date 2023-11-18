@@ -2,7 +2,7 @@ nodejs 21.2.0
 pnpm 8.10.5
 rust 1.73.0
 deno 1.38.1
-pulumi 3.94.0
+pulumi 3.94.2
 mysql 8.0.34
 k9s 0.28.2
 python 3.12.0
