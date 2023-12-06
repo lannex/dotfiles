@@ -102,9 +102,9 @@ local plugins = {
 	{
 		"nvimdev/guard.nvim",
 		init = init.guard,
-    dependencies = {
-      "nvimdev/guard-collection",
-    }
+		dependencies = {
+			"nvimdev/guard-collection",
+		},
 	},
 
 	{
@@ -116,6 +116,14 @@ local plugins = {
 		"folke/trouble.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		event = "VeryLazy",
+	},
+
+	{
+		"tpope/vim-fugitive",
+		opt = true,
+		cmd = {
+			"Git",
+		},
 	},
 }
 
