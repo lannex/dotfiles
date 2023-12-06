@@ -123,6 +123,7 @@ local plugins = {
 		opt = true,
 		cmd = {
 			"Git",
+			"G",
 		},
 	},
 }
