@@ -31,7 +31,9 @@ M.treesitter = {
 		"python",
 		"go",
 		"elixir",
+		"java",
 		"kotlin",
+		"groovy",
 		"clojure",
 	},
 	indent = {
