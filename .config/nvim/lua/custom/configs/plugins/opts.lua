@@ -46,6 +46,7 @@ M.mason = {
 		"lua-language-server",
 		"stylua",
 		"taplo",
+		"hadolint",
 
 		"css-lsp",
 		"html-lsp",

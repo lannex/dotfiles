@@ -10,7 +10,9 @@ local sources = {
 	b.formatting.isort,
 	b.formatting.clang_format,
 
-	b.formatting.taplo,
+	b.formatting.taplo.with({ filetypes = { "toml" } }),
+
+	b.diagnostics.hadolint.with({ filetypes = { "dockerfile" } }),
 }
 
 null_ls.setup({
