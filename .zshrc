@@ -110,3 +110,6 @@ export EDITOR="nvim"
 
 source /opt/homebrew/opt/asdf/libexec/asdf.sh
 
+# k8s
+alias k=kubectl
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
