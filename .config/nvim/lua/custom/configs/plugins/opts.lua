@@ -144,6 +144,9 @@ M.copilot = {
 			accept = "<A-/>",
 		},
 	},
+	filetypes = {
+		yaml = true,
+	},
 }
 
 return M
