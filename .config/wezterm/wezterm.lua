@@ -13,6 +13,9 @@ config.inactive_pane_hsb = {
 	brightness = 0.5,
 }
 
-config.keys = {}
+config.keys = {
+	{ key = "\\", mods = "SUPER", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	{ key = "\\", mods = "SUPER|SHIFT", action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
+}
 
 return config
