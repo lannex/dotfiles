@@ -106,10 +106,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# k9s
 export EDITOR="nvim"
 
+# asdf
 source /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # k8s
 alias k=kubectl
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
+# atuin
+eval "$(atuin init zsh)"
