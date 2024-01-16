@@ -9,7 +9,6 @@ M.guard = function()
 	ft("lua"):fmt("stylua")
 	ft("python"):fmt("black"):append("isort")
 	ft("rust"):fmt("rustfmt")
-	ft("yaml"):fmt("prettier")
 
 	require("guard").setup({
 		fmt_on_save = true,
