@@ -10,7 +10,7 @@ poetry 1.7.1
 lazygit 0.40.2
 dbmate 2.10.0
 awscli 2.15.8
-helm 3.13.3
+helm 3.14.0
 kubectx 0.9.5
 bun 1.0.22
 kubectl 1.29.0
