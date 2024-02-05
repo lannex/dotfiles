@@ -121,3 +121,6 @@ eval "$(atuin init zsh)"
 
 # java
 export JAVA_HOME=$(/usr/libexec/java_home -v17)
+
+# haskell ghcup-env
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" 
