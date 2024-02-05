@@ -118,3 +118,6 @@ alias k=kubectl
 
 # atuin
 eval "$(atuin init zsh)"
+
+# java
+export JAVA_HOME=$(/usr/libexec/java_home -v17)
