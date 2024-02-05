@@ -16,3 +16,4 @@ bun 1.0.25
 kubectl 1.29.0
 eksctl 0.167.0
 argocd 2.9.3
+zellij 0.39.2
