@@ -35,6 +35,7 @@ M.treesitter = {
 		"kotlin",
 		"groovy",
 		"clojure",
+		"haskell",
 	},
 	indent = {
 		enable = true,
