@@ -81,6 +81,9 @@ M.nvimtree = {
 			},
 		},
 	},
+	view = {
+		width = 40,
+	},
 	filters = {
 		custom = {
 			".DS_Store",
