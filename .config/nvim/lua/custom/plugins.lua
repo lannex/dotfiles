@@ -126,6 +126,12 @@ local plugins = {
 			"G",
 		},
 	},
+
+	{
+		"mrcjkb/rustaceanvim",
+		version = "^4",
+		ft = { "rust" },
+	},
 }
 
 return plugins
