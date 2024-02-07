@@ -1,5 +1,9 @@
 local init = require("custom.configs.plugins.init")
-local opts = require("custom.configs.plugins.opts")
+local nvimtree = require("custom.configs.plugins.nvimtree")
+local mason = require("custom.configs.plugins.mason")
+local treesitter = require("custom.configs.plugins.treesitter")
+local cmp = require("custom.configs.plugins.cmp")
+local copilot = require("custom.configs.plugins.copilot")
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -25,17 +29,17 @@ local plugins = {
 	-- override plugin configs
 	{
 		"williamboman/mason.nvim",
-		opts = opts.mason,
+		opts = mason.opts,
 	},
 
 	{
 		"nvim-treesitter/nvim-treesitter",
-		opts = opts.treesitter,
+		opts = treesitter.opts,
 	},
 
 	{
 		"nvim-tree/nvim-tree.lua",
-		opts = opts.nvimtree,
+		opts = nvimtree.opts,
 	},
 
 	{
@@ -63,23 +67,14 @@ local plugins = {
 	-- Plugins
 	{
 		"hrsh7th/nvim-cmp",
-		opts = opts.cmp,
-		dependencies = {
-			{
-				"tzachar/cmp-tabnine",
-				build = "./install.sh",
-				config = function()
-					local tabnine = require("cmp_tabnine.config")
-					tabnine:setup({})
-				end,
-			},
-		},
+		opts = cmp.opts,
+		dependencies = cmp.dependencies,
 	},
 
 	{
 		"zbirenbaum/copilot.lua",
 		event = "InsertEnter",
-		opts = opts.copilot,
+		opts = copilot.opts,
 	},
 
 	{
