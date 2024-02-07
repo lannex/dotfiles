@@ -132,6 +132,16 @@ local plugins = {
 		version = "^4",
 		ft = { "rust" },
 	},
+
+	{
+		"mfussenegger/nvim-dap",
+		lazy = true,
+		dependencies = {
+			"theHamsta/nvim-dap-virtual-text",
+			"rcarriga/nvim-dap-ui",
+			"mfussenegger/nvim-dap-python",
+		},
+	},
 }
 
 return plugins
