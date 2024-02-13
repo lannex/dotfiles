@@ -117,7 +117,7 @@ alias k=kubectl
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
 # atuin
-eval "$(atuin init zsh)"
+eval "$(atuin init zsh --disable-up-arrow)"
 
 # java
 export JAVA_HOME=$(/usr/libexec/java_home -v17)
