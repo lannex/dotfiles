@@ -126,6 +126,24 @@ local plugins = {
 		"mrcjkb/rustaceanvim",
 		version = "^4",
 		ft = { "rust" },
+		init = function()
+			vim.g.rustaceanvim = {
+				server = {
+					on_attach = function(client, bufnr)
+						-- you can also put keymaps in here
+					end,
+					default_settings = {
+						["rust-analyzer"] = {
+							cargo = {
+								extraEnv = {
+									RUST_PROJECT_FILE = { "Cargo.toml", "rust-project.json" },
+								},
+							},
+						},
+					},
+				},
+			}
+		end,
 	},
 
 	{
