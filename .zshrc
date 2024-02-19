@@ -127,3 +127,6 @@ export JAVA_HOME=$(/usr/libexec/java_home -v17)
 
 # zellij
 eval "$(zellij setup --generate-auto-start zsh)"
+
+# zoxide
+eval "$(zoxide init zsh)"
