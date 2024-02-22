@@ -132,12 +132,11 @@ local plugins = {
 					on_attach = function(client, bufnr)
 						-- you can also put keymaps in here
 					end,
-					default_settings = {
+					root_dir = require("lspconfig/util").root_pattern("Cargo.toml"),
+					settings = {
 						["rust-analyzer"] = {
 							cargo = {
-								extraEnv = {
-									RUST_PROJECT_FILE = { "Cargo.toml", "rust-project.json" },
-								},
+								allFeatures = true,
 							},
 						},
 					},
