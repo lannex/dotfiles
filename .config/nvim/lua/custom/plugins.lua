@@ -24,6 +24,9 @@ local plugins = {
 			require("plugins.configs.lspconfig")
 			require("custom.configs.lspconfig")
 		end, -- Override to setup mason-lspconfig
+		opts = {
+			inlay_hints = { enabled = true },
+		},
 	},
 
 	-- override plugin configs
