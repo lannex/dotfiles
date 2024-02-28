@@ -133,7 +133,7 @@ local plugins = {
 			vim.g.rustaceanvim = {
 				server = {
 					on_attach = function(client, bufnr)
-						-- you can also put keymaps in here
+						require("plugins.configs.lspconfig/on_attach")
 					end,
 					root_dir = require("lspconfig/util").root_pattern("Cargo.toml"),
 					settings = {

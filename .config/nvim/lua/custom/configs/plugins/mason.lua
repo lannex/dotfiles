@@ -15,8 +15,7 @@ local mason = {
 			"clangd",
 			"clang-format",
 			"pyright",
-			"black",
-			"isort",
+			"ruff",
 			"ruff-lsp",
 			"rust-analyzer",
 			-- "rustfmt", rustfmt should no longer be installed via Mason but instead through rustup, due to external factors.

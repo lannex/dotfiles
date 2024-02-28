@@ -4,16 +4,16 @@ local b = null_ls.builtins
 
 local sources = {
 	-- formatting
-	b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
+	-- b.formatting.deno_fmt,
+	-- b.formatting.taplo.with({ filetypes = { "toml" } }),
+	-- b.formatting.ruff,
+
 	b.formatting.prettier.with({
 		filetypes = { "html", "markdown", "css", "yaml" },
 		extra_args = { "--tab-width", "2" },
 	}),
-	b.formatting.black,
-	b.formatting.isort,
 	b.formatting.clang_format,
 	b.formatting.ktlint.with({ filetypes = { "kotlin" } }),
-	b.formatting.taplo.with({ filetypes = { "toml" } }),
 
 	-- diagnostics
 	b.diagnostics.ktlint.with({ filetypes = { "kotlin" } }),
