@@ -5,6 +5,7 @@ local treesitter = require("custom.configs.plugins.treesitter")
 local cmp = require("custom.configs.plugins.cmp")
 local copilot = require("custom.configs.plugins.copilot")
 local guard = require("custom.configs.plugins.guard")
+local rustaceanvim = require("custom.configs.plugins.rustaceanvim")
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -130,23 +131,7 @@ local plugins = {
 		"mrcjkb/rustaceanvim",
 		version = "^4",
 		ft = { "rust" },
-		init = function()
-			vim.g.rustaceanvim = {
-				server = {
-					on_attach = function(client, bufnr)
-						require("plugins.configs.lspconfig/on_attach")
-					end,
-					root_dir = require("lspconfig/util").root_pattern("Cargo.toml"),
-					settings = {
-						["rust-analyzer"] = {
-							cargo = {
-								allFeatures = true,
-							},
-						},
-					},
-				},
-			}
-		end,
+		init = rustaceanvim.init,
 	},
 
 	{
