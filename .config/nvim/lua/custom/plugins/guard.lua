@@ -1,4 +1,5 @@
-local guard = {
+return {
+	"nvimdev/guard.nvim",
 	init = function()
 		local ft = require("guard.filetype")
 		ft("lua"):fmt("stylua")
@@ -10,6 +11,7 @@ local guard = {
 			lsp_as_default_formatter = false,
 		})
 	end,
+	dependencies = {
+		"nvimdev/guard-collection",
+	},
 }
-
-return guard

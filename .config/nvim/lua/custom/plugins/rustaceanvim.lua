@@ -1,4 +1,7 @@
-local rustaceanvim = {
+return {
+	"mrcjkb/rustaceanvim",
+	version = "*",
+	ft = { "rust" },
 	init = function()
 		vim.g.rustaceanvim = {
 			server = {
@@ -17,5 +20,3 @@ local rustaceanvim = {
 		}
 	end,
 }
-
-return rustaceanvim

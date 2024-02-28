@@ -1,11 +1,8 @@
-local init = require("custom.configs.plugins.init")
 local nvimtree = require("custom.configs.plugins.nvimtree")
 local mason = require("custom.configs.plugins.mason")
 local treesitter = require("custom.configs.plugins.treesitter")
 local cmp = require("custom.configs.plugins.cmp")
 local copilot = require("custom.configs.plugins.copilot")
-local guard = require("custom.configs.plugins.guard")
-local rustaceanvim = require("custom.configs.plugins.rustaceanvim")
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -88,61 +85,14 @@ local plugins = {
 		dependencies = "hrsh7th/nvim-cmp",
 	},
 
-	{
-		"ggandor/leap.nvim",
-		init = init.leap,
-	},
-
-	{
-		"gelguy/wilder.nvim",
-		keys = { "/", "?", ":" },
-		build = ":UpdateRemotePlugins",
-	},
-
-	{
-		"nvimdev/guard.nvim",
-		init = guard.init,
-		dependencies = {
-			"nvimdev/guard-collection",
-		},
-	},
-
-	{
-		"kevinhwang91/nvim-bqf",
-		ft = "qf",
-	},
-
-	{
-		"folke/trouble.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		event = "VeryLazy",
-	},
-
-	{
-		"tpope/vim-fugitive",
-		opt = true,
-		cmd = {
-			"Git",
-			"G",
-		},
-	},
-
-	{
-		"mrcjkb/rustaceanvim",
-		version = "*",
-		ft = { "rust" },
-		init = rustaceanvim.init,
-	},
-
-	{
-		"mfussenegger/nvim-dap",
-		lazy = true,
-		dependencies = {
-			"theHamsta/nvim-dap-virtual-text",
-			"rcarriga/nvim-dap-ui",
-			"mfussenegger/nvim-dap-python",
-		},
-	},
+	require("custom.plugins.leap"),
+	require("custom.plugins.wilder"),
+	require("custom.plugins.guard"),
+	require("custom.plugins.nvim-bqf"),
+	require("custom.plugins.trouble"),
+	require("custom.plugins.vim-fugitive"),
+	require("custom.plugins.rustaceanvim"),
+	require("custom.plugins.nvim-dap"),
 	require("custom.plugins.indent-blankline"),
 }
 
