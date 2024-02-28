@@ -4,6 +4,7 @@ local mason = require("custom.configs.plugins.mason")
 local treesitter = require("custom.configs.plugins.treesitter")
 local cmp = require("custom.configs.plugins.cmp")
 local copilot = require("custom.configs.plugins.copilot")
+local guard = require("custom.configs.plugins.guard")
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -99,7 +100,7 @@ local plugins = {
 
 	{
 		"nvimdev/guard.nvim",
-		init = init.guard,
+		init = guard.init,
 		dependencies = {
 			"nvimdev/guard-collection",
 		},
