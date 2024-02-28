@@ -94,6 +94,7 @@ local plugins = {
 	require("custom.plugins.rustaceanvim"),
 	require("custom.plugins.nvim-dap"),
 	require("custom.plugins.indent-blankline"),
+	require("custom.plugins.noice"),
 }
 
 return plugins
