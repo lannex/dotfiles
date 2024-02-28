@@ -129,7 +129,7 @@ local plugins = {
 
 	{
 		"mrcjkb/rustaceanvim",
-		version = "^4",
+		version = "*",
 		ft = { "rust" },
 		init = rustaceanvim.init,
 	},
@@ -143,6 +143,7 @@ local plugins = {
 			"mfussenegger/nvim-dap-python",
 		},
 	},
+	require("custom.plugins.indent-blankline"),
 }
 
 return plugins
