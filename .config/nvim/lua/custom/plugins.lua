@@ -1,8 +1,6 @@
 local nvimtree = require("custom.configs.plugins.nvimtree")
 local mason = require("custom.configs.plugins.mason")
 local treesitter = require("custom.configs.plugins.treesitter")
-local cmp = require("custom.configs.plugins.cmp")
-local copilot = require("custom.configs.plugins.copilot")
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -67,24 +65,9 @@ local plugins = {
 	-- }
 
 	-- Plugins
-	{
-		"hrsh7th/nvim-cmp",
-		opts = cmp.opts,
-		dependencies = cmp.dependencies,
-	},
-
-	{
-		"zbirenbaum/copilot.lua",
-		event = "InsertEnter",
-		opts = copilot.opts,
-	},
-
-	{
-		"tzachar/cmp-tabnine",
-		build = "./install.sh",
-		dependencies = "hrsh7th/nvim-cmp",
-	},
-
+	require("custom.plugins.nvim-cmp"),
+	require("custom.plugins.copilot"),
+	require("custom.plugins.cmp-tabnine"),
 	require("custom.plugins.leap"),
 	require("custom.plugins.wilder"),
 	require("custom.plugins.guard"),

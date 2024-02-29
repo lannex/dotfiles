@@ -1,4 +1,5 @@
-local cmp = {
+return {
+	"hrsh7th/nvim-cmp",
 	opts = {
 		sources = {
 			{ name = "nvim_lsp" },
@@ -8,6 +9,7 @@ local cmp = {
 			{ name = "path" },
 			{ name = "cmp_tabnine" },
 		},
+
 		mapping = {
 			--   -- disable  tab
 			--   ["<Tab>"] = function(callback)
@@ -59,5 +61,3 @@ local cmp = {
 		},
 	},
 }
-
-return cmp
