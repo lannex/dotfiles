@@ -1,6 +1,6 @@
 nodejs 21.6.1
 pnpm 8.14.0
-rust 1.75.0
+rust 1.76.0
 deno 1.39.2
 pulumi 3.109.0
 mysql 8.0.34
@@ -10,7 +10,7 @@ poetry 1.7.1
 lazygit 0.40.2
 dbmate 2.11.0
 awscli 2.15.15
-helm 3.14.0
+helm 3.14.3
 kubectx 0.9.5
 bun 1.0.30
 kubectl 1.29.0
