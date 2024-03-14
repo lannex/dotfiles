@@ -12,7 +12,7 @@ dbmate 2.11.0
 awscli 2.15.15
 helm 3.14.0
 kubectx 0.9.5
-bun 1.0.25
+bun 1.0.30
 kubectl 1.29.0
 eksctl 0.167.0
 argocd 2.9.3
