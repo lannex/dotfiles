@@ -9,44 +9,40 @@ function update_plugins() {
     asdf plugin update --all
 }
 
-function update_tool_versions() {
-    log "Updating each plugin reference to the latest revision..."
-    local temp_file=".tool-versions.new"
-    local backup_file=".tool-versions.bk"
+function update_tool() {
+    local tool=$1
+    local current_version=$2
+    local latest_version=$(asdf latest $tool)
+  
+    echo "${tool} current version :: ${current_version}"
+    echo "${tool} latest version :: ${latest_version}"
 
-    while read -r plugin; do
-        echo "$plugin $(asdf latest $plugin)"
-    done < <(awk '{print $1}' .tool-versions) > "$temp_file"
+    if [[ $current_version == $latest_version ]]; then
+        log "${tool} is already up-to-date."
+        return
+    fi
 
-    cp .tool-versions "$backup_file"
-    mv "$temp_file" .tool-versions
-}
-
-function print_diff() {
-    log "Old revision versions:"
-    cat .tool-versions.bk
-    log "New revision versions:"
-    cat .tool-versions
-}
-
-function prompt_install() {
-    while true; do
-        read -p "Do you wish to install all new revisions?" yn
-        case $yn in
-            [Yy]* ) asdf install; break;;
-            [Nn]* ) exit;;
-            * ) log "Please answer Yes or No.";;
-        esac
-    done
+    read -p "Do you want to update ${tool}? (Y/n): " response
+    if [[ $response =~ ^[Yy]$ ]]; then\
+        asdf install $tool $latest_version
+        asdf global $tool $latest_version
+    else
+        log "Skipping ${tool} update..."
+    fi
 }
 
 function main() {
     update_plugins
-    update_tool_versions
-    print_diff
-    prompt_install
 
-    rm -rf .tool-versions.bk
+    declare -A tools
+    while IFS=" " read -r tool version; do
+      tools[$tool]=$version
+    done < .tool-versions
+
+    for tool in "${!tools[@]}"; do
+      update_tool "$tool" "${tools[$tool]}"
+    done
+
     log "Done, bye! 👋"
 }
 
