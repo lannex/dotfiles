@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 read -p "Enter the name of the tool to clean up: " tool_name
 

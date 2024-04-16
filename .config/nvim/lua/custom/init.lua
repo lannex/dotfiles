@@ -12,6 +12,8 @@ local opt = vim.opt
 opt.title = true
 opt.timeoutlen = 100
 opt.ttimeoutlen = 0
+-- opt.list = true
+-- opt.listchars:append("eol:¶")
 
 -- LSP Diagnostics Options Setup
 -- local sign = function(opts)
