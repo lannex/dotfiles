@@ -17,3 +17,4 @@ kubectl 1.29.3
 eksctl 0.175.0
 argocd 2.10.6
 zellij 0.40.0
+fx 34.0.0
