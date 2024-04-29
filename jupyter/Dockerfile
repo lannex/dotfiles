@@ -1,12 +1,23 @@
 FROM jupyter/base-notebook:latest
 
 USER root
+ENV DIR /home/jovyan
+WORKDIR ${DIR}
 
 # Install dependencies
 RUN apt-get update && apt-get install -y curl unzip build-essential openjdk-21-jdk
 
+# Haskell
+# RUN curl -sSL https://get.haskellstack.org/ | sh && \
+#     git clone https://github.com/gibiansky/IHaskell ${DIR}/IHaskell
+# WORKDIR ${DIR}/IHaskell
+# RUN chown -R jovyan ${DIR} && \
+#     sudo -u jovyan stack install --fast && \
+#     sudo -u jovyan ihaskell install --stack
+# WORKDIR ${DIR}
+
 # Deno
-ENV DENO_INSTALL="/home/jovyan/.deno"
+ENV DENO_INSTALL="${DIR}/.deno"
 ENV PATH="${DENO_INSTALL}/bin:${PATH}"
 RUN curl -fsSL https://deno.land/install.sh | sh && \
     deno jupyter --unstable --install
