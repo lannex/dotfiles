@@ -15,6 +15,8 @@ opt.ttimeoutlen = 0
 -- opt.list = true
 -- opt.listchars:append("eol:¶")
 
+vim.filetype.add({ extension = { purs = "purescript" } })
+
 -- LSP Diagnostics Options Setup
 -- local sign = function(opts)
 -- 	vim.fn.sign_define(opts.name, {

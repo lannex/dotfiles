@@ -21,6 +21,8 @@ local mason = {
 			-- "rustfmt", rustfmt should no longer be installed via Mason but instead through rustup, due to external factors.
 			"ktlint",
 			"codelldb",
+			"purescript-language-server",
+			"purescript-tidy",
 		},
 	},
 }

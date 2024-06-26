@@ -1,7 +1,11 @@
 local treesitter = {
 	opts = {
+		auto_install = true,
+		-- sync_install = true,
 		ensure_installed = {
 			"vim",
+			"vimdoc",
+			"query",
 			"lua",
 			"bash",
 			"markdown",
@@ -35,6 +39,7 @@ local treesitter = {
 			"groovy",
 			"clojure",
 			"haskell",
+			"purescript",
 		},
 		indent = {
 			enable = true,

@@ -31,6 +31,25 @@ lspconfig.pyright.setup({
 	},
 })
 
+lspconfig.purescriptls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = {
+		"purescript",
+		"purs",
+	},
+	settings = {
+		purescript = {
+			addSpagoSources = true,
+			addNpmPath = true,
+			formatter = "purs-tidy",
+		},
+	},
+	flags = {
+		debounce_text_changes = 150,
+	},
+})
+
 -- Automatically set up rust-analyzer
 -- lspconfig.rust_analyzer.setup({
 -- 	on_attach = on_attach,
