@@ -7,7 +7,6 @@ return {
 			{ name = "buffer" },
 			{ name = "nvim_lua" },
 			{ name = "path" },
-			{ name = "cmp_tabnine" },
 		},
 
 		mapping = {
@@ -50,14 +49,5 @@ return {
 		},
 	},
 
-	dependencies = {
-		{
-			"tzachar/cmp-tabnine",
-			build = "./install.sh",
-			config = function()
-				local tabnine = require("cmp_tabnine.config")
-				tabnine:setup({})
-			end,
-		},
-	},
+	dependencies = {},
 }

@@ -67,7 +67,6 @@ local plugins = {
 	-- Plugins
 	require("custom.plugins.nvim-cmp"),
 	require("custom.plugins.copilot"),
-	require("custom.plugins.cmp-tabnine"),
 	require("custom.plugins.leap"),
 	require("custom.plugins.wilder"),
 	require("custom.plugins.guard"),
