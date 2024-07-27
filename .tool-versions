@@ -18,3 +18,4 @@ eksctl 0.186.0
 argocd 2.11.3
 zellij 0.40.1
 fx 35.0.0
+fzf 0.53.0
