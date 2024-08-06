@@ -76,6 +76,7 @@ local plugins = {
 	require("custom.plugins.nvim-dap"),
 	require("custom.plugins.indent-blankline"),
 	require("custom.plugins.noice"),
+	require("custom.plugins.supermaven"),
 }
 
 return plugins
