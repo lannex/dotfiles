@@ -4,6 +4,13 @@ local M = {}
 M.general = {
 	n = {
 		[";"] = { ":", "enter command mode", opts = { nowait = true } },
+		["q"] = {
+			function()
+				require("noice").cmd("dismiss")
+			end,
+			"Close Noice notification",
+			opts = { nowait = true },
+		},
 	},
 	i = {
 		["<C-s>"] = { "<Cmd>update<CR>", "Write" },
