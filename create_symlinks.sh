@@ -1,8 +1,8 @@
 #!/bin/bash
 
+source_dir=~/dotfiles
 
 create_config_symlinks() {
-  local source_dir=~/dotfiles
   local target_dir=~/.config
   local config_list=(nvim/lua/custom wezterm)
 
@@ -13,7 +13,6 @@ create_config_symlinks() {
 }
 
 create_root_symlinks() {
-  local source_dir=~/dotfiles
   local target_dir=~
   local root_list=(.tool-versions .atamanrc.config .ideavimrc .zshrc)
 
@@ -22,5 +21,12 @@ create_root_symlinks() {
   done
 }
 
+create_hammerspoon_symlink() {
+  local dir=.hammerspoon
+  rm -r "$HOME/$dir"
+  ln -fs "$source_dir/$dir" "$HOME/$dir"
+}
+
 create_config_symlinks
 create_root_symlinks
+create_hammerspoon_symlink
