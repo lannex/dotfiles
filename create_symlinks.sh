@@ -14,11 +14,18 @@ create_config_symlinks() {
 
 create_root_symlinks() {
   local target_dir=~
-  local root_list=(.tool-versions .atamanrc.config .ideavimrc .zshrc)
+  local root_list=(.atamanrc.config .ideavimrc .zshrc)
 
   for item in "${root_list[@]}"; do
     ln -fs "$source_dir/$item" "$target_dir/$item"
   done
+}
+
+create_asdf_symlink() {
+  local dir=asdf
+  local file=.tool-versions
+  rm -r "$HOME/$file"
+  ln -fs "$source_dir/$dir/$file" "$HOME/$file"
 }
 
 create_hammerspoon_symlink() {
@@ -29,4 +36,5 @@ create_hammerspoon_symlink() {
 
 create_config_symlinks
 create_root_symlinks
+create_asdf_symlink
 create_hammerspoon_symlink
