@@ -5,6 +5,7 @@ return {
 		ft("lua"):fmt("stylua")
 		ft("rust"):fmt("rustfmt")
 		ft("python"):fmt("ruff")
+		ft("typescript,javascript,typescriptreact"):fmt("prettier")
 
 		require("guard").setup({
 			fmt_on_save = true,
