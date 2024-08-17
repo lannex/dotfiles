@@ -15,6 +15,10 @@ hs.hotkey.bind({"ctrl", "shift"}, "s", function()
     hs.application.launchOrFocus("Slack.app")
 end)
 
+hs.hotkey.bind({"ctrl", "shift"}, "w", function()
+    hs.application.launchOrFocus("WezTerm.app")
+end)
+
 -- NOTE: Switching from Korean to English by pressing ESC
 -- local inputEnglish = "com.apple.keylayout.ABC"
 -- local esc_bind
