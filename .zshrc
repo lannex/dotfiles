@@ -76,6 +76,7 @@ plugins=(
 	zsh-syntax-highlighting
 	asdf
   nix-shell
+  kube-ps1
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -115,6 +116,7 @@ source /opt/homebrew/opt/asdf/libexec/asdf.sh
 # k8s
 alias k=kubectl
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+PROMPT='$(kube_ps1)'$PROMPT
 
 # atuin
 eval "$(atuin init zsh --disable-up-arrow)"
