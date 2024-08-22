@@ -116,6 +116,7 @@ source /opt/homebrew/opt/asdf/libexec/asdf.sh
 # k8s
 alias k=kubectl
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+alias kc=kubectx
 PROMPT='$(kube_ps1)'$PROMPT
 
 # atuin
