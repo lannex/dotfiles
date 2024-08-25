@@ -7,13 +7,28 @@
 // from the command palette.
 [
   {
-    "context": "Workspace",
-    "bindings": {}
-  },
-  {
     "context": "Editor",
     "bindings": {
-      "alt-shift-f": "editor::Format"
+      "alt-shift-f": "editor::Format",
+      "alt-shift-e": "editor::Hover"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-shift-o": "file_finder::Toggle",
+      "cmd-shift-a": "command_palette::Toggle",
+      "alt-t": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "space e": "project_panel::ToggleFocus"
     }
   }
 ]
