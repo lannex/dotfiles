@@ -18,7 +18,9 @@
     "bindings": {
       "cmd-shift-o": "file_finder::Toggle",
       "cmd-shift-a": "command_palette::Toggle",
-      "alt-t": "terminal_panel::ToggleFocus"
+      "alt-t": "terminal_panel::ToggleFocus",
+      "alt-,": "workspace::ToggleLeftDock",
+      "alt-.": "workspace::ToggleRightDock"
     }
   },
   {
