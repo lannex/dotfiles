@@ -7,7 +7,7 @@ local util = require("lspconfig/util")
 local servers = {
 	"html",
 	"cssls",
-	"tsserver",
+	"ts_ls",
 	"clangd",
 	"ruff_lsp",
 }
