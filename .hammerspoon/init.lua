@@ -7,7 +7,7 @@ hs.hotkey.bind({"ctrl", "shift"}, "v", function()
     hs.application.launchOrFocus("Visual Studio Code.app")
 end)
 
-hs.hotkey.bind({"ctrl", "shift"}, "c", function()
+hs.hotkey.bind({"ctrl", "shift"}, "g", function()
     hs.application.launchOrFocus("Google Chrome.app")
 end)
 
@@ -17,6 +17,10 @@ end)
 
 hs.hotkey.bind({"ctrl", "shift"}, "w", function()
     hs.application.launchOrFocus("WezTerm.app")
+end)
+
+hs.hotkey.bind({"ctrl", "shift"}, "c", function()
+    hs.application.launchOrFocus("ChatGPT.app")
 end)
 
 -- NOTE: Switching from Korean to English by pressing ESC
