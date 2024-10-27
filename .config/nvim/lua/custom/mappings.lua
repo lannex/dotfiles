@@ -11,6 +11,18 @@ M.general = {
 			"Close Noice notification",
 			opts = { nowait = true },
 		},
+		["<A-,>"] = {
+			function()
+				require("nvim-tree.api").tree.resize({ relative = -5 })
+			end,
+			"Decrease NvimTree width",
+		},
+		["<A-.>"] = {
+			function()
+				require("nvim-tree.api").tree.resize({ relative = 5 })
+			end,
+			"Increase NvimTree width",
+		},
 	},
 	i = {
 		["<C-s>"] = { "<Cmd>update<CR>", "Write" },
