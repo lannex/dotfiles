@@ -133,3 +133,6 @@ eval "$(zellij setup --generate-auto-start zsh)"
 
 # zoxide
 eval "$(zoxide init zsh)"
+
+# postgresql
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
