@@ -9,7 +9,6 @@ local servers = {
 	"cssls",
 	"ts_ls",
 	"clangd",
-	"ruff_lsp",
 }
 
 for _, lsp in ipairs(servers) do
