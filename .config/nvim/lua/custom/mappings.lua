@@ -89,10 +89,10 @@ M.leap = {
 
 M.guard = {
 	n = {
-		["<SA-f>"] = { "<Cmd>GuardFmt<CR>", "Guard fmt" },
+		["<SA-f>"] = { "<Cmd>Guard fmt<CR>", "Guard fmt" },
 	},
 	i = {
-		["<SA-f>"] = { "<Cmd>GuardFmt<CR>", "Guard fmt" },
+		["<SA-f>"] = { "<Cmd>Guard fmt<CR>", "Guard fmt" },
 	},
 }
 
