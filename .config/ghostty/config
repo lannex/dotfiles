@@ -1,5 +1,7 @@
 theme = Dracula
 
+font-family = JetBrainsMono NFM Light
+
 keybind = alt+up=goto_split:top
 keybind = alt+down=goto_split:bottom
 keybind = alt+left=goto_split:left
