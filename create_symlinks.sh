@@ -4,7 +4,7 @@ source_dir=~/dotfiles
 
 create_config_symlinks() {
   local target_dir=~/.config
-  local config_list=(nvim/lua/custom wezterm zed zellij)
+  local config_list=(nvim/lua/custom wezterm zed zellij ghostty)
 
   for item in "${config_list[@]}"; do
     rm -r "$target_dir/$item"
