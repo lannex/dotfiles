@@ -20,6 +20,12 @@ zellij 0.41.2
 fx 35.0.0
 fzf 0.57.0
 stern 1.31.0
+
+# https://github.com/asdf-vm/asdf-elixir
 elixir 1.18.1-otp-27
+
+# https://github.com/asdf-vm/asdf-erlang
 erlang 27.2
+
+# https://github.com/comdotlinux/asdf-lazydocker
 lazydocker 0.24.1
