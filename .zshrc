@@ -111,7 +111,8 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR="nvim"
 
 # asdf
-source /opt/homebrew/opt/asdf/libexec/asdf.sh
+export ASDF_DATA_DIR="$HOME/.asdf"
+export PATH="$ASDF_DATA_DIR/shims:$PATH"
 
 # k8s
 alias k=kubectl
@@ -135,7 +136,7 @@ eval "$(zellij setup --generate-auto-start zsh)"
 eval "$(zoxide init zsh)"
 
 # postgresql
-export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+# export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
 # rga
 rga-fzf() {
