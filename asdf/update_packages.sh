@@ -12,7 +12,8 @@ function update_plugins() {
 function update_tool() {
     local tool=$1
     local current_version=$2
-    local latest_version=$(asdf latest $tool)
+    local latest_version
+    latest_version=$(asdf latest "$tool")
   
     echo "${tool} current version :: ${current_version}"
     echo "${tool} latest version :: ${latest_version}"
@@ -22,10 +23,10 @@ function update_tool() {
         return
     fi
 
-    read -p "Do you want to update ${tool}? (Y/n): " response
-    if [[ $response =~ ^[Yy]$ ]]; then\
-        asdf install $tool $latest_version
-        asdf global $tool $latest_version
+    read -p "Do you want to update ${tool}? (Y/n): " response </dev/tty
+    if [[ -z "$response" || "$response" =~ ^[Yy]$ ]]; then
+        asdf install "$tool" "$latest_version"
+        asdf set "$tool" "$latest_version"
     else
         log "Skipping ${tool} update..."
     fi
@@ -34,17 +35,12 @@ function update_tool() {
 function main() {
     update_plugins
 
-    declare -A tools
     while IFS=" " read -r tool version; do
-      tools[$tool]=$version
+        [[ -z "$tool" || "$tool" =~ ^# ]] && continue
+        update_tool "$tool" "$version"
     done < .tool-versions
-
-    for tool in "${!tools[@]}"; do
-      update_tool "$tool" "${tools[$tool]}"
-    done
 
     log "Done, bye! 👋"
 }
 
 main
-
