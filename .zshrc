@@ -153,3 +153,6 @@ rga-fzf() {
 	xdg-open "$file"
 }
 
+# flutter
+export FLUTTER_ROOT="$(asdf where flutter)"
+
