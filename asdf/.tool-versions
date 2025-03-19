@@ -5,7 +5,7 @@ pnpm 9.15.9
 rust 1.85.0
 # https://github.com/asdf-community/asdf-deno
 deno 2.2.4
-pulumi 3.145.0
+pulumi 3.157.0
 mysql 8.0.34
 # https://github.com/looztra/asdf-k9s
 k9s 0.40.9
