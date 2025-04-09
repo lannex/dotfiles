@@ -10,7 +10,7 @@ mysql 8.0.34
 # https://github.com/looztra/asdf-k9s
 k9s 0.40.10
 python 3.11.9
-poetry 1.8.4
+poetry 2.1.2
 # https://github.com/nklmilojevic/asdf-lazygit
 lazygit 0.48.0
 dbmate 2.26.0
