@@ -14,8 +14,6 @@ mysql 8.0.34
 k9s 0.40.10
 # https://github.com/danhper/asdf-python
 python 3.12.10
-# https://github.com/asdf-community/asdf-poetry
-poetry 2.1.2
 # https://github.com/nklmilojevic/asdf-lazygit
 lazygit 0.48.0
 # https://github.com/juusujanar/asdf-dbmate
