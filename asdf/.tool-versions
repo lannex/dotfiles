@@ -11,7 +11,7 @@ pulumi 3.159.0
 # https://github.com/iroddis/asdf-mysql
 mysql 8.0.34
 # https://github.com/looztra/asdf-k9s
-k9s 0.40.10
+k9s 0.50.3
 # https://github.com/danhper/asdf-python
 python 3.12.10
 # https://github.com/nklmilojevic/asdf-lazygit
