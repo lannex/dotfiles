@@ -7,7 +7,7 @@ rust 1.85.0
 # https://github.com/asdf-community/asdf-deno
 deno 2.2.5
 # https://github.com/canha/asdf-pulumi
-pulumi 3.159.0
+pulumi 3.163.0
 # https://github.com/iroddis/asdf-mysql
 mysql 8.0.34
 # https://github.com/looztra/asdf-k9s
