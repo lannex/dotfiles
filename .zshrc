@@ -156,3 +156,5 @@ rga-fzf() {
 # flutter
 export FLUTTER_ROOT="$(asdf where flutter)"
 
+# terraform
+export KUBE_CONFIG_PATH="$HOME/.kube/config"
