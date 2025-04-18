@@ -52,3 +52,5 @@ flutter 3.29.2-stable
 uv 0.6.14
 # https://github.com/asdf-community/asdf-golang
 golang 1.24.2
+# https://github.com/asdf-community/asdf-hashicorp
+terraform 1.11.4
