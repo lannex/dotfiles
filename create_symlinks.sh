@@ -14,7 +14,7 @@ create_config_symlinks() {
 
 create_root_symlinks() {
   local target_dir=~
-  local root_list=(.atamanrc.config .ideavimrc .zshrc)
+  local root_list=(.atamanrc.config .ideavimrc .zshrc .terraformrc)
 
   for item in "${root_list[@]}"; do
     ln -fs "$source_dir/$item" "$target_dir/$item"
