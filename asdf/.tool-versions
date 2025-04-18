@@ -50,3 +50,5 @@ lazydocker 0.24.1
 flutter 3.29.2-stable
 # https://github.com/asdf-community/asdf-uv
 uv 0.6.14
+# https://github.com/asdf-community/asdf-golang
+golang 1.24.2
