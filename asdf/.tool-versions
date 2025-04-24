@@ -60,3 +60,5 @@ just 1.40.0
 azure-cli 2.71.0
 # https://github.com/sechmann/asdf-kubelogin
 kubelogin 0.2.7
+# https://github.com/asdf-community/asdf-duckdb
+duckdb 1.2.2
