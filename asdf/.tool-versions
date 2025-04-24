@@ -58,3 +58,5 @@ terraform 1.11.4
 just 1.40.0
 # https://github.com/EcoMind/asdf-azure-cli
 azure-cli 2.71.0
+# https://github.com/sechmann/asdf-kubelogin
+kubelogin 0.2.7
