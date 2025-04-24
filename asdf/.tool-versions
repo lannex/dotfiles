@@ -54,6 +54,7 @@ uv 0.6.14
 golang 1.24.2
 # https://github.com/asdf-community/asdf-hashicorp
 terraform 1.11.4
-# https://github.com/olofvndrhr/asdf-just.git
+# https://github.com/olofvndrhr/asdf-just
 just 1.40.0
-
+# https://github.com/EcoMind/asdf-azure-cli
+azure-cli 2.71.0
