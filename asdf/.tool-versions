@@ -1,7 +1,7 @@
 # https://github.com/asdf-vm/asdf-nodejs
 nodejs 23.10.0
 # https://github.com/jonathanmorley/asdf-pnpm
-pnpm 9.15.9
+pnpm 10.12.1
 # https://github.com/code-lever/asdf-rust
 rust 1.85.0
 # https://github.com/asdf-community/asdf-deno
