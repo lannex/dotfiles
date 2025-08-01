@@ -4,7 +4,7 @@ source_dir=~/dotfiles
 
 create_config_symlinks() {
   local target_dir=~/.config
-  local config_list=(nvim/lua/custom wezterm zed zellij ghostty)
+  local config_list=(nvim/lua/custom wezterm zed zellij ghostty mise)
 
   for item in "${config_list[@]}"; do
     rm -r "$target_dir/$item"
@@ -21,13 +21,6 @@ create_root_symlinks() {
   done
 }
 
-create_asdf_symlink() {
-  local dir=asdf
-  local file=.tool-versions
-  rm -r "$HOME/$file"
-  ln -fs "$source_dir/$dir/$file" "$HOME/$file"
-}
-
 create_hammerspoon_symlink() {
   local dir=.hammerspoon
   rm -r "$HOME/$dir"
@@ -36,5 +29,4 @@ create_hammerspoon_symlink() {
 
 create_config_symlinks
 create_root_symlinks
-create_asdf_symlink
-create_hammerspoon_symlink
+# create_hammerspoon_symlink

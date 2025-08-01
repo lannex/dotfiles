@@ -74,8 +74,6 @@ plugins=(
 	git
 	zsh-autosuggestions
 	zsh-syntax-highlighting
-	asdf
-  nix-shell
   kube-ps1
 )
 
@@ -110,9 +108,8 @@ source $ZSH/oh-my-zsh.sh
 # k9s
 export EDITOR="nvim"
 
-# asdf
-export ASDF_DATA_DIR="$HOME/.asdf"
-export PATH="$ASDF_DATA_DIR/shims:$PATH"
+# mise
+eval "$(mise activate zsh)"
 
 # k8s
 alias k=kubectl
@@ -127,7 +124,7 @@ eval "$(atuin init zsh --disable-up-arrow)"
 export JAVA_HOME=$(/usr/libexec/java_home -v17)
 
 # haskell ghcup-env
-[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" 
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
 
 # zellij
 eval "$(zellij setup --generate-auto-start zsh)"
@@ -154,7 +151,7 @@ rga-fzf() {
 }
 
 # flutter
-export FLUTTER_ROOT="$(asdf where flutter)"
+export FLUTTER_ROOT="$(mise where flutter)"
 
 # terraform
 export KUBE_CONFIG_PATH="$HOME/.kube/config"
