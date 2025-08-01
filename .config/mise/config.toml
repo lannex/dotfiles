@@ -1,6 +1,7 @@
 [tools]
 bun = "latest"
 deno = "latest"
+flutter = "latest"
 go = "latest"
 helm = "latest"
 just = "latest"
