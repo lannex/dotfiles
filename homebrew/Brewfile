@@ -1,4 +1,3 @@
-tap "homebrew/services"
 brew "atuin"
 brew "asdf"
 brew "bat"
