@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source_dir=~/dotfiles
+dotfiles_dir=~/dotfiles
 
 create_config_symlinks() {
   local target_dir=~/.config
@@ -16,7 +16,7 @@ create_config_symlinks() {
 
   for item in "${config_list[@]}"; do
     rm -r "$target_dir/$item"
-    ln -fs "$source_dir/.config/$item" "$target_dir/$item"
+    ln -fs "$dotfiles_dir/.config/$item" "$target_dir/$item"
   done
 }
 
@@ -25,16 +25,22 @@ create_root_symlinks() {
   local root_list=(.atamanrc.config .ideavimrc .zshrc .terraformrc)
 
   for item in "${root_list[@]}"; do
-    ln -fs "$source_dir/$item" "$target_dir/$item"
+    ln -fs "$dotfiles_dir/$item" "$target_dir/$item"
   done
 }
 
-create_hammerspoon_symlink() {
-  local dir=.hammerspoon
-  rm -r "$HOME/$dir"
-  ln -fs "$source_dir/$dir" "$HOME/$dir"
+create_dropbox_symlink() {
+  local target_dir=~
+  local dropbox_list=(
+    .cursor
+  )
+
+  for item in "${dropbox_list[@]}"; do
+    rm -r "$target_dir/$item"
+    ln -fs "$HOME/Dropbox/$item" "$target_dir/$item"
+  done
 }
 
 create_config_symlinks
 create_root_symlinks
-# create_hammerspoon_symlink
+create_dropbox_symlink
