@@ -155,3 +155,6 @@ export FLUTTER_ROOT="$(mise where flutter)"
 
 # terraform
 export KUBE_CONFIG_PATH="$HOME/.kube/config"
+
+# nexus
+export PATH="/Users/sj/.nexus/bin:$PATH"
