@@ -1,5 +1,4 @@
 brew "atuin"
-brew "asdf"
 brew "bat"
 brew "exercism"
 brew "gnupg"
