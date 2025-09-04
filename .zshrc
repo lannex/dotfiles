@@ -133,7 +133,7 @@ eval "$(zellij setup --generate-auto-start zsh)"
 eval "$(zoxide init zsh)"
 
 # postgresql
-# export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 
 # rga
 rga-fzf() {
