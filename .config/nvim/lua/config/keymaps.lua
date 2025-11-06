@@ -1,8 +1,13 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
-local wk = require("which-key")
+-- ~/.config/nvim/lua/config/keymaps.lua
 
+local wk = require("which-key")
 wk.add({
   { "<leader>a", group = "AI Tools" },
 })
+
+local map = vim.keymap.set
+local opts = { noremap = true, silent = true }
+map("n", "<S-Up>", ":resize +2<CR>", opts)
+map("n", "<S-Down>", ":resize -2<CR>", opts)
+map("n", "<S-Left>", ":vertical resize -2<CR>", opts)
+map("n", "<S-Right>", ":vertical resize +2<CR>", opts)
