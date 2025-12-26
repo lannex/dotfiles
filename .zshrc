@@ -127,7 +127,7 @@ export JAVA_HOME=$(/usr/libexec/java_home -v17)
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
 
 # zellij
-eval "$(zellij setup --generate-auto-start zsh)"
+# eval "$(zellij setup --generate-auto-start zsh)"
 
 # zoxide
 eval "$(zoxide init zsh)"
@@ -158,3 +158,8 @@ export KUBE_CONFIG_PATH="$HOME/.kube/config"
 
 # nexus
 export PATH="/Users/sj/.nexus/bin:$PATH"
+
+. "$HOME/.local/bin/env"
+
+# Added by Antigravity
+export PATH="/Users/sj/.antigravity/antigravity/bin:$PATH"
