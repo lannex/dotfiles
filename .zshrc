@@ -163,3 +163,7 @@ export PATH="/Users/sj/.nexus/bin:$PATH"
 
 # Added by Antigravity
 export PATH="/Users/sj/.antigravity/antigravity/bin:$PATH"
+
+# obsidian
+export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"/
+

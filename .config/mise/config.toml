@@ -1,5 +1,5 @@
 [tools]
-aws-cli = "latest"
+aws-cli = { version = "latest", symlink_bins = "true" }
 bun = "latest"
 deno = "latest"
 flutter = "latest"
